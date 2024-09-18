@@ -61,13 +61,13 @@ $toys = [
 $products = [
     new Product('Crocchette per Cani', 20.99, './img/crocchette-per-cani.jpeg', $categoryDogs, ItemType::Food),
     new Product('Pallina Giocattolo', 5.99, './img/pallina-per-cani.jpg', $categoryDogs, ItemType::Toy),
-    new Product('Cuccia per Gatti', 45.50, './img/cuccia-per-gatti.jpg', $categoryCats, ItemType::Kennel),
+    new Product('Cuccia per Gatti', 45.99, './img/cuccia-per-gatti.jpg', $categoryCats, ItemType::Kennel),
     new Product('Guinzaglio per Cani', 12.99, './img/guinzaglio-per-cani.jpg', $categoryDogs, ItemType::Toy),
-    new Product('Tiragraffi per Gatti', 30.00, './img/Tiragraffi-per-gatti.jpg', $categoryCats, ItemType::Kennel),
+    new Product('Tiragraffi per Gatti', 30.99, './img/Tiragraffi-per-gatti.jpg', $categoryCats, ItemType::Kennel),
     new Product('Snack per Gatti', 4.99, './img/snack-per-gatti.jpg', $categoryCats, ItemType::Food),
-    new Product('Ciotola per Cani', 8.50, './img/ciotole-per-cani.jpg', $categoryDogs, ItemType::Kennel),
-    new Product('Osso di Gomma', 6.00, './img/osso-di-gomma.jpg', $categoryDogs, ItemType::Toy),
-    new Product('Gioco per Gatti con Piume', 7.50, './img/gioco-gatti.jpg', $categoryCats, ItemType::Toy),
+    new Product('Ciotola per Cani', 8.99, './img/ciotole-per-cani.jpg', $categoryDogs, ItemType::Kennel),
+    new Product('Osso di Gomma', 6.99, './img/osso-di-gomma.jpg', $categoryDogs, ItemType::Toy),
+    new Product('Gioco per Gatti con Piume', 7.99, './img/gioco-gatti.jpg', $categoryCats, ItemType::Toy),
     new Product('Cuccia per Cani', 50.99, './img/cuccia-per-cani.jpg', $categoryDogs, ItemType::Kennel),
     new Product('Spazzola per Gatti', 9.99, './img/spazzola-per-gatti.png', $categoryCats, ItemType::WellBeing),
     new Product('Shampoo per Cani', 14.99, './img/shampoo-per-cani.jpg', $categoryDogs, ItemType::WellBeing),
@@ -87,17 +87,17 @@ $products = [
 </head>
 <body>
     <div class="container">
-        <h1 class="my-4 text-center">Shop Online per Animali</h1>
+        <h1 class="my-4 text-center fw-bold">Shop Online per Animali</h1>
         <div class="row g-4">
             <?php foreach ($products as $product) : ?>
                 <div class="col-md-4">
                     <div class="card h-100 product-card">
-                        <img src="<?php echo $product->image; ?>" class="card-img-top" alt="<?php echo $product->title; ?>">
-                        <div class="card-body">
-                            <h5 class="card-title"><?php echo $product->title; ?></h5>
-                            <p class="product-price">€<?php echo $product->price; ?></p>
-                            <p class="product-category">Categoria: <?php echo $product->category->icon . ' ' . $product->category->name; ?></p>
-                            <p class="product-type">Tipo: <?php echo $product->itemType; ?></p>
+                        <img src="<?php echo $product->image; ?>" class="card-img-top bg-white" alt="<?php echo $product->title; ?>">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold"><?php echo $product->title; ?></h5>
+                            <p class="product-price fw-bold">€<?php echo $product->price; ?></p>
+                            <p class="product-category"><span class="fw-bold">Categoria:</span> <?php echo $product->category->icon . ' ' . $product->category->name; ?></p>
+                            <p class="product-type"><span class="fw-bold">Tipo:</span> <?php echo $product->itemType; ?></p>
                         </div>
                     </div>
                 </div>

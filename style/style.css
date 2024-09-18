@@ -3,3 +3,24 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    background-image: url(../img/vecteezy_cat-or-dog-footprints-vector-seamless-pattern-on-dark_9733211.jpg);
+    background-repeat: repeat;
+}
+
+.bg-white{
+    height: 375px;
+    background-color: white;
+}
+
+.product-price:hover{
+    color: goldenrod;
+    cursor: pointer;
+}
+
+h1{
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
