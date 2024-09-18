@@ -13,8 +13,39 @@ class Category{
 //Istanze di Category
 $categoryDogs = new Category('Cani', '<i class="fa-solid fa-shield-dog"></i>');
 $categoryCats = new Category('Gatti', '<i class="fa-solid fa-shield-cat"></i>');
-var_dump($categoryDogs);
-var_dump($categoryCats);
+
+class ItemType {
+    const Food = 'Cibo';
+    const Toy = 'Gioco';
+    const Kennel = 'Cuccia';
+}
+
+class Product{
+    public $title;
+    public $price;
+    public $image;
+    public $category;
+    public $itemType;
+
+    public function __construct($title, $price, $image, $category, $itemType) {
+        $this->title = $title;
+        $this->price = $price;
+        $this->image = $image;
+        $this->category = $category;
+        $this->itemType = $itemType;
+    }
+
+    public function getProductDetails() {
+        return "Title: $this->title, Price: $this->price €, Category: {$this->category->name}, Type: $this->itemType";
+    }
+}
+
+//istanza di Product
+$products = [
+    new Product('Crocchette per Cani', 00 , '', $categoryDogs, ItemType::Food),
+];
+
+var_dump($products);
 
 ?>
 
