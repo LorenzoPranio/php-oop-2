@@ -41,11 +41,9 @@ class Product{
 }
 
 //istanza di Product
-$products = [
-    new Product('Crocchette per Cani', 00 , '', $categoryDogs, ItemType::Food),
-];
-
-var_dump($products);
+    $products = [
+        new Product('Crocchette per Cani', 20.99, '', $categoryDogs, ItemType::Food),
+    ];
 
 ?>
 
@@ -60,6 +58,23 @@ var_dump($products);
     <title>Animal Shop</title>
 </head>
 <body>
-    
+    <div class="container">
+        <h1 class="my-4 text-center">Shop Online per Animali</h1>
+        <div class="row g-4">
+            <?php foreach ($products as $product) : ?>
+                <div class="col-md-4">
+                    <div class="card h-100 product-card">
+                        <img src="<?php echo $product->image; ?>" class="card-img-top" alt="<?php echo $product->title; ?>">
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $product->title; ?></h5>
+                            <p class="product-price">€<?php echo $product->price; ?></p>
+                            <p class="product-category">Categoria: <?php echo $product->category->icon . ' ' . $product->category->name; ?></p>
+                            <p class="product-type">Tipo: <?php echo $product->itemType; ?></p>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
 </body>
 </html>
