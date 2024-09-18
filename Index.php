@@ -1,14 +1,20 @@
 <?php
 
 class Category{
-    public $name ;
-    public $icon ;
+    public $name;
+    public $icon;
 
     public function __construct($name, $icon) {
         $this->name = $name;
         $this->icon = $icon;
     }
 }
+
+//Istanze di Category
+$categoryDogs = new Category('Cani', '<i class="fa-solid fa-shield-dog"></i>');
+$categoryCats = new Category('Gatti', '<i class="fa-solid fa-shield-cat"></i>');
+var_dump($categoryDogs);
+var_dump($categoryCats);
 
 ?>
 
