@@ -28,7 +28,7 @@ class Product{
     public $category;
     public $itemType;
 
-    public function __construct($title, $price, $image, $category, $itemType) {
+    public function __construct($title, $price, $image, Category $category, $itemType) {
         $this->title = $title;
         $this->price = $price;
         $this->image = $image;
@@ -41,10 +41,26 @@ class Product{
     }
 }
 
+/*
+ESEMPIO DI EREDITA'
+class Toy extends Product{
+    public $material;
+
+    public function __construct($title, $price, $image, Category $category, $itemType, $material)
+    {
+        parent::__construct($title, $price, $image, $category, $itemType);
+        $this->material = $material;
+    }
+}
+
+$toys = [
+    new Toy('Pallina Giocattolo', 5.99, './img/pallina-per-cani.jpg', $categoryDogs, ItemType::Toy, 'Gomma'),
+];*/
+
 //istanza di Product
 $products = [
     new Product('Crocchette per Cani', 20.99, './img/crocchette-per-cani.jpeg', $categoryDogs, ItemType::Food),
-    new Product('Pallina Giocattolo', 5.99, './img/pallina-per-cani.jpg', $categoryCats, ItemType::Toy),
+    new Product('Pallina Giocattolo', 5.99, './img/pallina-per-cani.jpg', $categoryDogs, ItemType::Toy),
     new Product('Cuccia per Gatti', 45.50, './img/cuccia-per-gatti.jpg', $categoryCats, ItemType::Kennel),
     new Product('Guinzaglio per Cani', 12.99, './img/guinzaglio-per-cani.jpg', $categoryDogs, ItemType::Toy),
     new Product('Tiragraffi per Gatti', 30.00, './img/Tiragraffi-per-gatti.jpg', $categoryCats, ItemType::Kennel),
