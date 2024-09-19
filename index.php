@@ -1,14 +1,6 @@
 <?php
 
-class Category{
-    public $name;
-    public $icon;
-
-    public function __construct($name, $icon) {
-        $this->name = $name;
-        $this->icon = $icon;
-    }
-}
+require_once './classes/category.php';
 
 //Istanze di Category
 $categoryDogs = new Category('Cani', '<i class="fa-solid fa-shield-dog"></i>');
