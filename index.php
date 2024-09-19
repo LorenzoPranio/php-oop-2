@@ -1,17 +1,11 @@
 <?php
 
 require_once './classes/category.php';
+require_once './classes/itemtype.php';
 
 //Istanze di Category
 $categoryDogs = new Category('Cani', '<i class="fa-solid fa-shield-dog"></i>');
 $categoryCats = new Category('Gatti', '<i class="fa-solid fa-shield-cat"></i>');
-
-class ItemType {
-    const Food = 'Cibo';
-    const Toy = 'Gioco';
-    const Kennel = 'Cuccia';
-    const WellBeing = 'Benessere';
-}
 
 class Product{
     public $title;
