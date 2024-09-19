@@ -1,9 +1,5 @@
 <?php
 
-require_once './category.php';
-require_once './itemtype.php';
-require_once './product.php';
-
 $categoryDogs = new Category('Cani', '<i class="fa-solid fa-shield-dog"></i>');
 $categoryCats = new Category('Gatti', '<i class="fa-solid fa-shield-cat"></i>');
 

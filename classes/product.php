@@ -1,7 +1,4 @@
 <?php
-
-require_once './category.php';
-
 class Product{
     public $title;
     public $price;
