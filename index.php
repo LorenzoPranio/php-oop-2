@@ -35,20 +35,28 @@ require_once './classes/products.php';
     <title>Animal Shop</title>
 </head>
 <body>
-    <div class="container">
+<div class="container">
         <h1 class="my-4 text-center fw-bold">Shop Online per Animali</h1>
         <div class="row g-4">
             <?php foreach ($products as $product) : ?>
                 <div class="col-md-4">
-                    <div class="card h-100 product-card">
-                        <img src="<?php echo $product->image; ?>" class="card-img-top bg-white" alt="<?php echo $product->title; ?>">
-                        <div class="card-body text-center">
-                            <h5 class="card-title fw-bold"><?php echo $product->title; ?></h5>
-                            <p class="product-price fw-bold">€<?php echo $product->price; ?></p>
-                            <p class="product-category"><span class="fw-bold">Categoria:</span> <?php echo $product->category->icon . ' ' . $product->category->name; ?></p>
-                            <p class="product-type"><span class="fw-bold">Tipo:</span> <?php echo $product->itemType; ?></p>
+                    <?php 
+                    try {
+                        ?>
+                        <div class="card h-100 product-card">
+                            <img src="<?php echo $product->image; ?>" class="card-img-top bg-white" alt="<?php echo $product->title; ?>">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold"><?php echo $product->title; ?></h5>
+                                <p class="product-price fw-bold">€<?php echo $product->price; ?></p>
+                                <p class="product-category"><span class="fw-bold">Categoria:</span> <?php echo $product->category->icon . ' ' . $product->category->name; ?></p>
+                                <p class="product-type"><span class="fw-bold">Tipo:</span> <?php echo $product->itemType; ?></p>
+                            </div>
                         </div>
-                    </div>
+                        <?php
+                    } catch (ProductException $e) {
+                        echo '<div class="alert alert-danger" role="alert">' . $e->errorMessage() . '</div>';
+                    }
+                    ?>
                 </div>
             <?php endforeach; ?>
         </div>
