@@ -10,3 +10,12 @@ I prodotti saranno oltre al cibo, anche giochi, cucce, etc.
 
 Stampiamo delle card contenenti i dettagli dei prodotti, come immagine, titolo, prezzo, icona della categoria ed il tipo di articolo che si sta visualizzando (prodotto, cibo, gioco, cuccia).
 Cominciate a fare prima le classi. Per ogni classe creata, fate una o due istanze per vedere il risultato con il var_dump. Una volta create tutte le classi verificate che siano coerenti con quanto scritto nell'esercizio, allora create delle strutture dati da mostrare in pagina.
+
+(19/09/24) 
+Continuate a lavorare nella stessa repo di ieri aggiungendo almeno un exception al vostro shop!
+
+nome repo di ieri: php-oop-2
+
+Bonus:
+
+Aggiungete almeno un Trait al vostro lavoro
