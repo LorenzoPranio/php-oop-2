@@ -2,30 +2,11 @@
 
 require_once './classes/category.php';
 require_once './classes/itemtype.php';
+require_once './classes/product.php';
 
 //Istanze di Category
 $categoryDogs = new Category('Cani', '<i class="fa-solid fa-shield-dog"></i>');
 $categoryCats = new Category('Gatti', '<i class="fa-solid fa-shield-cat"></i>');
-
-class Product{
-    public $title;
-    public $price;
-    public $image;
-    public $category;
-    public $itemType;
-
-    public function __construct($title, $price, $image, Category $category, $itemType) {
-        $this->title = $title;
-        $this->price = $price;
-        $this->image = $image;
-        $this->category = $category;
-        $this->itemType = $itemType;
-    }
-
-    public function getProductDetails() {
-        return "Title: $this->title, Price: $this->price €, Category: {$this->category->name}, Type: $this->itemType";
-    }
-}
 
 /*
 ESEMPIO DI EREDITA'
